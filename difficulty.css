@@ -1,0 +1,129 @@
+/* ---------------- FONDO ANIMADO ---------------- */
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(130deg, #7bc6ff, #e3b9f0, #a7f0ff);
+    background-size: 300% 300%;
+    animation: gradientMove 12s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ---------------- PARTÍCULAS ---------------- */
+.particle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); opacity: 0.6; }
+    50% { transform: translateY(-25px); opacity: 0.9; }
+    100% { transform: translateY(0px); opacity: 0.6; }
+}
+
+.p1 { top: 10%; left: 20%; animation-duration: 7s; }
+.p2 { top: 70%; left: 75%; animation-duration: 6s; }
+.p3 { top: 50%; left: 10%; animation-duration: 5s; }
+.p4 { top: 25%; left: 80%; animation-duration: 8s; }
+.p5 { top: 85%; left: 45%; animation-duration: 6.5s; }
+
+/* ---------------- TARJETA ---------------- */
+.card {
+    width: 90%;
+    max-width: 400px;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 25px;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.20);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------- TITULO ---------------- */
+.title {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 25px;
+    text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* ---------------- BOTONES ---------------- */
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.btn {
+    padding: 18px;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    letter-spacing: 1px;
+    transition: 0.25s;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.20);
+    position: relative;
+}
+
+/* ICONO */
+.icon {
+    margin-right: 10px;
+    font-size: 28px;
+}
+
+/* COLORES + GLOW */
+.easy {
+    background: #67e492;
+    box-shadow: 0 0 18px #67e492;
+}
+.easy:hover { transform: scale(1.06); box-shadow: 0 0 25px #67e492; }
+
+.medium {
+    background: #ffa742;
+    box-shadow: 0 0 18px #ffa742;
+}
+.medium:hover { transform: scale(1.06); box-shadow: 0 0 25px #ffa742; }
+
+.hard {
+    background: #ff4c4c;
+    box-shadow: 0 0 18px #ff4c4c;
+}
+.hard:hover { transform: scale(1.06); box-shadow: 0 0 25px #ff4c4c; }
+
+/* BOTÓN VOLVER */
+.back {
+    display: block;
+    text-decoration: none;
+    margin-top: 30px;
+    color: white;
+    font-size: 20px;
+    opacity: 0.9;
+    transition: 0.3s;
+}
+.back:hover { opacity: 1; transform: translateX(-4px); }

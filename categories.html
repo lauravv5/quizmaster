@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías</title>
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+
+    <script>
+        // Leemos la dificultad enviada desde difficulty.html
+        const urlParams = new URLSearchParams(window.location.search);
+        const difficulty = urlParams.get("difficulty");
+    </script>
+
+    <div class="container">
+
+        <h1 class="title">Elige una categoría</h1>
+
+        <div class="cat-buttons">
+            <a id="culturaBtn" class="cat">Cultura</a>
+            <a id="cienciaBtn" class="cat">Ciencia</a>
+            <a id="entretenimientoBtn" class="cat">Entretenimiento</a>
+        </div>
+
+        <a href="difficulty.html" class="back">← Volver</a>
+    </div>
+
+<script>
+    // Agregamos la dificultad al link hacia el juego
+    document.getElementById("culturaBtn").href = `game.html?category=cultura&difficulty=${difficulty}`;
+    document.getElementById("cienciaBtn").href = `game.html?category=ciencia&difficulty=${difficulty}`;
+    document.getElementById("entretenimientoBtn").href = `game.html?category=entretenimiento&difficulty=${difficulty}`;
+</script>
+
+</body>
+</html>
